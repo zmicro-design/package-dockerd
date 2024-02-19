@@ -131,18 +131,21 @@ install() {
   # os::install $source_bin_file $usr_bin_dir $name
   if [ "$platform" = "linux" ]; then
     sudo mv docker/dockerd $usr_bin_dir
+    sudo mv docker/docker-init $usr_bin_dir
+    sudo mv docker/docker-proxy $usr_bin_dir
+    # sudo mv docker/docker $usr_bin_dir
 
     if [ "$(os::has_command docker)" != "true" ]; then
       sudo mv docker/docker $usr_bin_dir
     fi
 
-    if [ "$(os::has_command docker-init)" != "true" ]; then
-      sudo mv docker/docker-init $usr_bin_dir
-    fi
+    # if [ "$(os::has_command docker-init)" != "true" ]; then
+    #   sudo mv docker/docker-init $usr_bin_dir
+    # fi
 
-    if [ "$(os::has_command docker-proxy)" != "true" ]; then
-      sudo mv docker/docker-proxy $usr_bin_dir
-    fi
+    # if [ "$(os::has_command docker-proxy)" != "true" ]; then
+    #   sudo mv docker/docker-proxy $usr_bin_dir
+    # fi
 
     if [ "$(os::has_command containerd)" != "true" ]; then
       sudo mv docker/containerd $usr_bin_dir
