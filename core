@@ -34,6 +34,7 @@ install() {
     arch="aarch64"
     ;;
   amd64)
+    arch="x86_64"
     ;;
   *)
     log::error "[$(timestamp)] unsupport arch: $arch"
