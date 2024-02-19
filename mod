@@ -1,5 +1,5 @@
 NAME=dockerd
-VERSION=v0.0.5
+VERSION=v1.0.0
 MODULE=package
 DESCRIPTION="Zero's Service Manager"
 HOMEPAGE="https://github.com/zcorky/zmicro"
