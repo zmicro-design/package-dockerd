@@ -83,7 +83,7 @@ install() {
 
   # files
   local tmp_file="$name.tgz"
-  local source_bin_file="./${name}-${PACKAGE_CORE_VERSION#v}-${platform}-${arch}/$name"
+  local source_bin_file="./docker/$name"
   # reference: 
   #   https://docs.docker.com/engine/install/binaries/
   #   https://download.docker.com/linux/static/stable
