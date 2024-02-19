@@ -130,22 +130,22 @@ install() {
   log::info "[$(timestamp)][package][$name] installing ..."
   # os::install $source_bin_file $usr_bin_dir $name
   if [ "$platform" = "linux" ]; then
-    sudo cp docker/dockerd $user_bin_dir
-    sudo cp docker/docker $user_bin_dir
-    sudo cp docker/docker-init $user_bin_dir
-    sudo cp docker/docker-proxy $user_bin_dir
-    sudo cp docker/containerd-shim-runc-v2 $user_bin_dir
+    sudo cp docker/dockerd $usr_bin_dir
+    sudo cp docker/docker $usr_bin_dir
+    sudo cp docker/docker-init $usr_bin_dir
+    sudo cp docker/docker-proxy $usr_bin_dir
+    sudo cp docker/containerd-shim-runc-v2 $usr_bin_dir
 
     if [ "$(os::has_command containerd)" != "true" ]; then
-      sudo cp docker/containerd $user_bin_dir
+      sudo cp docker/containerd $usr_bin_dir
     fi
 
     if [ "$(os::has_command ctr)" != "true" ]; then
-      sudo cp docker/ctr $user_bin_dir
+      sudo cp docker/ctr $usr_bin_dir
     fi
 
     if [ "$(os::has_command runc)" != "true" ]; then
-      sudo cp docker/runc $user_bin_dir
+      sudo cp docker/runc $usr_bin_dir
     fi
   fi
 
